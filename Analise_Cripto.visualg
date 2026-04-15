@@ -1,0 +1,36 @@
+algoritmo "Analise_Cripto"
+
+var
+  nome: caractere
+  variacao: real
+
+inicio
+
+  escreval("Digite o nome da criptomoeda: ")
+  leia(nome)
+
+  escreval("Digite a variacao percentual (ex: 12 ou -15): ")
+  leia(variacao)
+
+  escreval("Criptomoeda: ", nome)
+  escreval("Variacao: ", variacao, "%")
+
+  se (variacao > 0) entao
+    se (variacao > 10) entao
+      escreval("Alta Relevante")
+    senao
+      escreval("Estabilidade")
+    fimse
+  senao
+    se (variacao < 0) entao
+      se (variacao < -10) entao
+        escreval("Correcao Forte")
+      senao
+        escreval("Estabilidade")
+      fimse
+    senao
+      escreval("Estabilidade")
+    fimse
+  fimse
+
+fimalgoritmo

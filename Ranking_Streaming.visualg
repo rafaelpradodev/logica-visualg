@@ -1,0 +1,27 @@
+algoritmo "Ranking_Streaming"
+
+var
+  telas: inteiro
+
+inicio
+
+  escreval("Quantas telas deseja usar simultaneamente? ")
+  leia(telas)
+
+  escreval("Quantidade informada: ", telas)
+
+  se (telas = 1) entao
+    escreval("Plano Mobile")
+  senao
+    se (telas = 2) entao
+      escreval("Plano Padrao")
+    senao
+      se (telas = 4) entao
+        escreval("Plano Premium")
+      senao
+        escreval("Opcao Invalida")
+      fimse
+    fimse
+  fimse
+
+fimalgoritmo
